@@ -785,6 +785,10 @@ oml_sync_control['swapbuffersmsc-return swap_interval 0'] = concurrent_test('glx
 oml_sync_control['swapbuffersmsc-return swap_interval 1'] = concurrent_test('glx-oml-sync-control-swapbuffersmsc-return 1')
 oml_sync_control['waitformsc'] = concurrent_test('glx-oml-sync-control-waitformsc')
 
+oml_sync_control['repeat-swapbuffers'] = PiglitTest(['glx-oml-sync-control-repeat-swapbuffers'])
+oml_sync_control['repeat-swapbuffers -msc-delta 1'] = PiglitTest(['glx-oml-sync-control-repeat-swapbuffers', '-msc-delta', '1'])
+oml_sync_control['repeat-swapbuffers -msc-delta 5'] = PiglitTest(['glx-oml-sync-control-repeat-swapbuffers', '-msc-delta', '5'])
+
 mesa_query_renderer = {}
 glx['GLX_MESA_query_renderer'] = mesa_query_renderer
 mesa_query_renderer['coverage'] = concurrent_test('glx-query-renderer-coverage')
